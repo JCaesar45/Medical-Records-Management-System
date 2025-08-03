@@ -1,0 +1,144 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling with dark theme and accents */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #1e1e2f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Container layout */
+.container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5em;
+  color: #00ffcc;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* Form card styling */
+.form-card {
+  background: #2f3640;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+/* Form title */
+.form-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1em;
+  color: #ccc;
+}
+
+/* Inputs and select */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  background-color: #555;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background-color: #00ffcc;
+  color: #1e1e2f;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 255, 204, 0.4);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #00ccbb;
+  transform: translateY(-2px);
+}
+
+/* Registered patients list */
+.patients-list {
+  background: #2f3640;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.patients-list h2 {
+  margin-bottom: 15px;
+  color: #00ffcc;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* List styles */
+#patientRecords {
+  list-style: none;
+}
+
+#patientRecords li {
+  background: #444;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #fff;
+}
