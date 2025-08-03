@@ -1,0 +1,35 @@
+<!-- Patient Registration Form -->
+<div class="container">
+  <div class="header">
+    <h1>HealthTV - Patient Registration</h1>
+    <p>Join the medical team and register new patients securely</p>
+  </div>
+  <div class="form-card">
+    <form id="patientForm">
+      <h2 class="form-title">Register a New Patient</h2>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="John Doe" required />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" placeholder="(123) 456-7890" required />
+
+      <button type="submit">Register Patient</button>
+    </form>
+  </div>
+  <div class="patients-list" id="patientsList">
+    <h2>Registered Patients</h2>
+    <ul id="patientRecords"></ul>
+  </div>
+</div>
