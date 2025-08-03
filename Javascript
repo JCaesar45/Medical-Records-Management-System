@@ -1,0 +1,52 @@
+// Array to hold patient records (simulating a database)
+const patientRecords = [];
+
+// Get references
+const form = document.getElementById("patientForm");
+const patientListContainer = document.getElementById("patientRecords");
+
+// Function to add a patient to the list
+function addPatient(patient) {
+  // Save patient (simulate encryption with base64)
+  const encrypted = btoa(JSON.stringify(patient));
+  patientRecords.push(encrypted);
+  renderPatients();
+}
+
+// Function to render all patients
+function renderPatients() {
+  patientListContainer.innerHTML = "";
+
+  patientRecords.forEach((enc, index) => {
+    // Decrypt data
+    const decrypted = JSON.parse(atob(enc));
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>Name:</strong> ${decrypted.name} <br>
+                    <strong>DOB:</strong> ${decrypted.dob} <br>
+                    <strong>Gender:</strong> ${decrypted.gender} <br>
+                    <strong>Phone:</strong> ${decrypted.phone}`;
+    patientListContainer.appendChild(li);
+  });
+}
+
+// Handle form submission
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const dob = document.getElementById("dob").value.trim();
+  const gender = document.getElementById("gender").value;
+  const phone = document.getElementById("phone").value.trim();
+
+  if (name && dob && gender && phone) {
+    const newPatient = { name, dob, gender, phone };
+    addPatient(newPatient);
+    alert("Patient registered successfully!");
+    form.reset();
+  } else {
+    alert("Please fill out all fields.");
+  }
+});
+
+// Initial render (if any data exists)
+renderPatients();
